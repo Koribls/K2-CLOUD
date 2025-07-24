@@ -13,20 +13,18 @@ dns:
       - 240.0.0.0/4
       - 0.0.0.0/32
 proxies:
-- name: dongtaiwang.com_0                     
-  type: anytls
-  server: tw.399403.xyz
-  port: 8443
-  password: dongtaiwang.com
-  client-fingerprint: chrome
-  udp: true
-  idle-session-check-interval: 30
-  idle-session-timeout: 30
-  min-idle-session: 0
-  alpn:
-    - h2
-    - http/1.1
-  skip-cert-verify: true
+  - name: dongtaiwang.com_0                     
+    type: hysteria
+    server: 108.181.24.77
+    port: 11512
+    auth-str: dongtaiwang.com
+    sni: apple.com
+    skip-cert-verify: true
+    alpn:
+      - h3
+    protocol: udp
+    up: "1000 Mbps"
+    down: "1000 Mbps"
 proxy-groups:
   - name: 🚀 节点选择
     type: select
