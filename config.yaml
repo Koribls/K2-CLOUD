@@ -35,7 +35,7 @@ proxies:
   idle-session-timeout: 30
   min-idle-session: 0
   skip-cert-verify: true
-  alpn: [h2]
+  alpn: [h3]
   udp: true
  -
   name: '🇺🇸 美国_2'
